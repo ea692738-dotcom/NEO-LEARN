@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEO LEARN — Future Learning</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-grid"></div>
+<header class="topbar">
+  <button class="menu" id="menuBtn">☰</button>
+  <div class="brand"><span class="logo">N</span><div><b>NEO LEARN</b><small>Future Learning Platform</small></div></div>
+  <div class="top-actions"><span id="progressTop">0%</span><button id="themeBtn">◐</button></div>
+</header>
+
+<div class="layout">
+<aside id="sidebar">
+  <div class="side-title">المسار الدراسي</div>
+  <button class="nav-item active" data-view="home">⌂ الرئيسية</button>
+  <button class="nav-item" data-view="progress">◉ التقدم</button>
+  <button class="nav-item" data-view="weeks">▦ الأسابيع الـ16</button>
+  <button class="nav-item" data-view="projects">⚡ المشاريع</button>
+  <button class="nav-item" data-view="achievements">★ الإنجازات</button>
+  <div class="side-title">الأسابيع</div>
+  <div id="weekNav"></div>
+</aside>
+
+<main>
+<section id="home" class="view active">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">SYSTEM ONLINE • 16 WEEKS</div>
+      <h1>اتعلم. <span>برمج.</span> ابتكر.</h1>
+      <p>من الذكاء الاصطناعي وTeachable Machine إلى Python والمشاريع التفاعلية — كل المنهج في مكان واحد.</p>
+      <button class="primary" data-view="progress">ابدأ المسار ←</button>
+      <button class="secondary" data-view="weeks">ابدأ التعلم</button>
+    </div>
+    <div class="orb"><div class="orb-core">NEO</div></div>
+  </div>
+  <div class="stats">
+    <div><strong>16</strong><span>أسبوع</span></div>
+    <div><strong>2</strong><span>مشروع أساسي مرفوع</span></div>
+    <div><strong id="doneCount">0</strong><span>أسبوع مكتمل</span></div>
+    <div><strong id="percentHome">0%</strong><span>التقدم</span></div>
+  </div>
+  <div class="section-head"><div><h2>المسار الكامل</h2><p>اختر أي أسبوع للبدء.</p></div></div>
+  <div class="week-grid" id="homeWeeks"></div>
+</section>
+
+<section id="progress" class="view">
+  <div class="section-head">
+    <div><div class="eyebrow">YOUR JOURNEY</div><h2>تقدمك في المسار</h2><p>ابدأ من 0% وشاهد تقدمك يزيد مع كل أسبوع مكتمل.</p></div>
+  </div>
+  <div class="progress-panel">
+    <div class="progress-ring" id="progressRing"><div><strong id="progressBig">0%</strong><span>التقدم</span></div></div>
+    <div class="progress-info">
+      <div class="progress-stat"><strong id="progressWeeks">0 / 16</strong><span>أسابيع مكتملة</span></div>
+      <div class="progress-stat"><strong id="progressRemaining">16</strong><span>أسبوع متبقي</span></div>
+      <div class="progress-stat"><strong>2</strong><span>مشروع أساسي</span></div>
+      <div class="bar large"><i id="progressBar"></i></div>
+      <p>كلما تحدد أسبوعًا كمكتمل، تتحدث الدائرة والشريط والنسبة تلقائيًا.</p>
+      <button class="primary" data-view="weeks">ابدأ التعلم ←</button>
+    </div>
+  </div>
+</section>
+
+<section id="weeks" class="view">
+  <div class="section-head"><div><div class="eyebrow">CURRICULUM</div><h2>الأسابيع الـ16</h2></div><input id="search" placeholder="ابحث في الأسابيع أو الدروس..."></div>
+  <div class="week-grid" id="allWeeks"></div>
+</section>
+
+<section id="weekDetail" class="view">
+  <button class="back" id="backWeeks">← رجوع للأسابيع</button>
+  <div id="detail"></div>
+</section>
+
+<section id="projects" class="view">
+  <div class="section-head"><div><div class="eyebrow">PROJECT LAB</div><h2>المشاريع</h2><p>المشروعان المرفوعان مرفقان داخل حزمة الموقع.</p></div></div>
+  <div class="project-grid" id="projectGrid"></div>
+</section>
+
+<section id="achievements" class="view">
+  <div class="section-head"><div><div class="eyebrow">ACHIEVEMENTS</div><h2>الإنجازات</h2></div></div>
+  <div class="achievement-grid" id="achievementGrid"></div>
+</section>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
